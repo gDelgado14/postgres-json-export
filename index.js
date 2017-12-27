@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const { Pool, Client } = require('pg')
+const { Pool } = require('pg')
 
 const dbRunner = require('./dbRunner')
 
