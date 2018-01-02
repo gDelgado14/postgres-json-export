@@ -21,7 +21,7 @@ const writeFileToDisk = ({ table_name, result }) => {
   })
 }
 
-const normalizeRows = (tableResult) => JSON.stringify(tableResult.rows.map(row => row.row_to_json))
+const normalizeRows = (tableResult) => JSON.stringify(tableResult.rows.map(row => row.row_to_json), null, 2)
 
 module.exports = async (pool) => {
   const res = await pool.query(`
